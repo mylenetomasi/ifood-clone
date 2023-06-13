@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator, createStateNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -8,6 +9,18 @@ import Home from './screens/Home';
 import Busca from './screens/Busca';
 import Perfil from './screens/Perfil';
 import Pedidos from './screens/Pedidos';
+import Pagamentos from './screens/Pagamentos';
+
+const PerfilStack = createStackNavigator();
+
+function PerfilRoutes() {
+  return (
+    <PerfilStack.Navigator>
+      <PerfilStack.Screen name="Perfil" component={Perfil} />
+      <PerfilStack.Screen name="Pagamentos" component={Pagamentos} />
+    </PerfilStack.Navigator>
+  );
+} 
 
 const BottomTab = createBottomTabNavigator();
 
