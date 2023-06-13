@@ -64,9 +64,10 @@ export default function Routes() {
           }}
         />
         <BottomTab.Screen
-          name="Perfil"
-          component={Perfil}
+          name="PerfilRoutes"
+          component={PerfilRoutes}
           options={{
+            headerShown: false,
             tabBarLabel: 'Perfil',
             tabBarIcon: ({ color }) => (
               <MaterialIcons name="person" color={color} size={26} />
